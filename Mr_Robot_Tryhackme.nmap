@@ -1,0 +1,45 @@
+# Nmap 7.94SVN scan initiated Fri Feb  9 02:15:50 2024 as: nmap -A -Pn -T4 -v -oA Scan 10.10.237.244
+Nmap scan report for 10.10.237.244
+Host is up (0.19s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE  VERSION
+22/tcp  closed ssh
+80/tcp  open   http     Apache httpd
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+443/tcp open   ssl/http Apache httpd
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+| ssl-cert: Subject: commonName=www.example.com
+| Issuer: commonName=www.example.com
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2015-09-16T10:45:03
+| Not valid after:  2025-09-13T10:45:03
+| MD5:   3c16:3b19:87c3:42ad:6634:c1c9:d0aa:fb97
+|_SHA-1: ef0c:5fa5:931a:09a5:687c:a2c2:80c4:c792:07ce:f71b
+|_http-server-header: Apache
+Device type: general purpose|specialized|storage-misc|WAP|printer
+Running (JUST GUESSING): Linux 5.X|3.X|4.X|2.6.X (90%), Crestron 2-Series (87%), HP embedded (87%), Asus embedded (86%)
+OS CPE: cpe:/o:linux:linux_kernel:5.4 cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4 cpe:/o:crestron:2_series cpe:/h:hp:p2000_g3 cpe:/o:linux:linux_kernel:2.6.22 cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4
+Aggressive OS guesses: Linux 5.4 (90%), Linux 3.10 - 3.13 (89%), Linux 3.10 - 4.11 (88%), Linux 3.2 - 3.8 (88%), Linux 4.2 (88%), Linux 4.4 (88%), Linux 3.12 (87%), Linux 3.13 (87%), Linux 3.13 or 4.2 (87%), Linux 3.2 - 3.5 (87%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 198.048 days (since Wed Jul 26 02:07:09 2023)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=254 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   185.38 ms 10.8.0.1
+2   186.48 ms 10.10.237.244
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Feb  9 02:16:31 2024 -- 1 IP address (1 host up) scanned in 40.97 seconds
